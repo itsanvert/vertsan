@@ -9,7 +9,7 @@ const PostPage = ({ params }: { params: { id: string } }) => {
   }
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto px-4 py-10 ">
       <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
       <p className="text-muted-foreground">{post.content}</p>
     </div>

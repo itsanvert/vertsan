@@ -60,22 +60,18 @@ const techLogos: Logo[] = [
 
 export default function TechLogos() {
   return (
-    <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden bg-background ">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8  text-left">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center mb-10"
+          className=" mb-10"
         >
-          <h2 className="p-10 text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-foreground/80 via-foreground to-foreground/80 bg-clip-text text-transparent">
+          <h2 className="p-5 text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-foreground/80 via-foreground to-foreground/80 bg-clip-text text-transparent">
             My Tech Stack
           </h2>
-          <p className="text-muted-foreground mt-4 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
-            A collection of tools and technologies I use to build modern,
-            scalable web applications.
-          </p>
         </motion.div>
 
         <div className="relative">

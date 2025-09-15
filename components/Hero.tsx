@@ -2,7 +2,7 @@
 
 import { SplineScene } from "@/components/ui/splite";
 import { Card } from "@/components/ui/card";
-import { Spotlight } from "@/components/ui/spotlight";
+
 import BlurText from "./BlurText";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
@@ -23,12 +23,10 @@ export function HeroSection() {
   return (
     <Card
       className={cn(
-        "w-full h-[600px] relative overflow-hidden transition-colors duration-300",
+        "w-full h-[600px] relative overflow-hidden transition-colors duration-300 ",
         isDark ? "bg-black/[0.96] text-white" : "bg-white text-black shadow-lg"
       )}
     >
-      <Spotlight />
-
       <div className="flex h-full">
         {/* Left content */}
         <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
@@ -45,7 +43,7 @@ export function HeroSection() {
                 )}
               />
               <BlurText
-                text="I'm a software engineer"
+                text="I'm a web developer"
                 delay={100} // Reduced and staggered delay
                 animateBy="words"
                 direction="top"
@@ -58,7 +56,7 @@ export function HeroSection() {
               {/* Add a subtle call-to-action or description */}
               <div className="mt-4">
                 <BlurText
-                  text="Crafting digital experiences with passion and precision"
+                  text=""
                   delay={200}
                   animateBy="words"
                   direction="top"
@@ -67,6 +65,14 @@ export function HeroSection() {
                     isDark ? "text-neutral-400" : "text-neutral-600"
                   )}
                 />
+                <div className="flex flex-row mt-6 space-x-4">
+                  <button className="px-6 py-2 border border-black bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200 cursor-pointer">
+                    <a href="#">Resume</a>
+                  </button>
+                  <button className="px-6 py-2 border border-black bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200 cursor-pointer">
+                    <a href="https://t.me/itsanvert">Contact Me</a>
+                  </button>
+                </div>
               </div>
             </>
           ) : (

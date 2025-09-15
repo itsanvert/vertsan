@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Navbar } from "@/components/Navbar";
 import { ModeToggle } from "@/components/ModeToggle";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Vert San - Developer",
@@ -48,15 +49,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="mx-auto p-4  sm:px-0 sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-6xl ">
-            <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+          <main className="mx-auto p-4 sm:px-0 sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-6xl w-full">
+            <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
               <div className="mx-auto px-4 sm:px-6 lg:px-8 py-4 max-w-7xl flex justify-between items-center">
                 <Navbar />
                 <ModeToggle />
               </div>
             </header>
-
             {children}
+            <Footer />
           </main>
         </ThemeProvider>
       </body>

@@ -7,18 +7,14 @@ import Blog from "./blog/page";
 
 export default function Home() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col justify-between">
       {/* Use the amazing hero component */}
-      
       <HeroSection />
-
-      {/* Logo loop section */}
       <TechLogos />
       <Blog />
-      {/* Main content */}
 
-      {/* Footer */}
-      <Footer />
-    </>
+
+      
+    </div>
   );
 }

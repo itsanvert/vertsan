@@ -40,10 +40,8 @@ export function Navbar() {
       <NavBody>
         <NavbarLogo />
         <NavItems items={navItems} />
-        <NavbarButton href="/contact" variant="primary">
-          Contact Me
-        </NavbarButton>
       </NavBody>
+
       <MobileNav>
         <MobileNavHeader>
           <NavbarLogo />
@@ -61,9 +59,6 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <NavbarButton href="/contact" variant="gradient">
-              Contact Us
-            </NavbarButton>
           </div>
         </MobileNavMenu>
       </MobileNav>
