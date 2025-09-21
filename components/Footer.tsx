@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-col items-center gap-4 md:items-start">
           <Link href="/" className="flex">
             <p className="hidden p-2 md:block text-md font-medium tracking-wider">
-              Vert San.
+              vert.san/profile
             </p>
           </Link>
           <p className="text-sm text-muted-foreground">© 2025, Vert San</p>
