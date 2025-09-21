@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -17,17 +16,10 @@ const Footer = () => {
         <div className="flex flex-col items-center gap-4 text-sm text-muted-foreground md:items-start">
           <p className="text-sm font-medium text-foreground">Links</p>
           <Link href="/">Home</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/">Terms of Service</Link>
-          <Link href="/">Privacy Policy</Link>
+          <Link href="/blog">Blog</Link>
+        
         </div>
-        <div className="flex flex-col items-center gap-4 text-sm text-muted-foreground md:items-start">
-          <p className="text-sm font-medium text-foreground">Social</p>
-          <Link href="/">Facebook</Link>
-          <Link href="/">Twitter</Link>
-          <Link href="/">Instagram</Link>
-          <Link href="/">LinkedIn</Link>
-        </div>
+        
       </div>
     </footer>
   );

@@ -1,67 +1,43 @@
 "use client";
 
-import {
-  Navbar as ResizableNavbar,
-  NavBody,
-  NavItems,
-  MobileNav,
-  MobileNavHeader,
-  MobileNavMenu,
-  MobileNavToggle,
-  NavbarButton,
-} from "./ui/resizable-navbar";
-import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-const NavbarLogo = () => {
+const Navbar = () => {
   return (
-    <Link
-      href="/"
-      className="text-lg font-semibold transition-colors hover:text-primary relative z-20 mr-4 flex items-center space-x-2 px-2 py-1"
-    >
-      Vert San
-    </Link>
+    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
+      <div className="mx-auto flex justify-between items-center py-4 px-6 max-w-7xl">
+        <Link
+          href="/"
+          className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+        >
+          <Image
+            src="/logo.png"
+            alt="Vert San Logo"
+            width={32}
+            height={32}
+            className=""
+          />
+          <span className="font-medium text-foreground">vert.san</span>
+        </Link>
+
+        <div className="flex items-center gap-6">
+          <Link
+            href="/"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Home
+          </Link>
+          <Link
+            href="/blog"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Blog
+          </Link>
+        </div>
+      </div>
+    </nav>
   );
 };
 
-export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const navItems = [
-    { name: "Home", link: "/" },
-    { name: "About", link: "/about" },
-    { name: "Project", link: "/project" },
-
-    { name: "Blog", link: "/blog" },
-  ];
-
-  return (
-    <ResizableNavbar>
-      <NavBody>
-        <NavbarLogo />
-        <NavItems items={navItems} />
-      </NavBody>
-
-      <MobileNav>
-        <MobileNavHeader>
-          <NavbarLogo />
-          <MobileNavToggle isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
-        </MobileNavHeader>
-        <MobileNavMenu isOpen={isOpen}>
-          <div className="flex flex-col items-start gap-4 p-4">
-            {navItems.map((item) => (
-              <Link
-                key={item.link}
-                href={item.link}
-                onClick={() => setIsOpen(false)}
-                className="w-full py-2 px-4 hover:bg-accent rounded-md text-neutral-600 dark:text-neutral-300"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </MobileNavMenu>
-      </MobileNav>
-    </ResizableNavbar>
-  );
-}
+export default Navbar;
