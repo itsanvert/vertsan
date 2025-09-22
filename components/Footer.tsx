@@ -1,25 +1,62 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="mt-16 rounded-lg bg-background/95 p-8 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-8 md:flex-row md:items-start md:gap-0">
-        <div className="flex flex-col items-center gap-4 md:items-start">
-          <Link href="/" className="flex">
-            <p className="hidden p-2 md:block text-md font-medium tracking-wider">
-              vert.san/profile
-            </p>
+    <footer className="max-w-3xl mx-auto px-4 sm:px-6 py-8 mt-16">
+      {/* Main Footer Content */}
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 border-t border-gray-200 dark:border-gray-700 pt-8">
+        {/* Logo Section */}
+        <div className="flex items-center gap-3">
+          <Image
+            src="/logo.png"
+            alt="Vert San"
+            width={32}
+            height={32}
+            className="rounded-full"
+          />
+          <span className="text-sm font-medium text-foreground">
+            vert.san/profile
+          </span>
+        </div>
+
+        {/* Navigation Links */}
+        <div className="flex items-center gap-4 sm:gap-6">
+          <Link
+            href="/"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Home
           </Link>
-          <p className="text-sm text-muted-foreground">© 2025, Vert San</p>
-          <p className="text-sm text-muted-foreground">All rights reserved.</p>
+
+          <Link
+            href="/about"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            About
+          </Link>
+
+          <Link
+            href="/projects"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Projects
+          </Link>
+
+          <Link
+            href="/blog"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Blog
+          </Link>
         </div>
-        <div className="flex flex-col items-center gap-4 text-sm text-muted-foreground md:items-start">
-          <p className="text-sm font-medium text-foreground">Links</p>
-          <Link href="/">Home</Link>
-          <Link href="/blog">Blog</Link>
-        
-        </div>
-        
+      </div>
+
+      {/* Copyright Section */}
+      <div className="mt-6 text-center">
+        <p className="text-xs text-muted-foreground">
+          © 2025 Vert San. All rights reserved.
+        </p>
       </div>
     </footer>
   );

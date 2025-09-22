@@ -1,11 +1,8 @@
 // Import the amazing hero component
 
-import TechLogos from "@/components/LogoLoop";
 import { HeroSection } from "@/components/Hero";
-import Blog from "./blog/page";
+import AboutPage from "./about/page";
 
-import Project from "./project/page";
-import { ExperiencePage } from "./experience/page";
 
 export default function Home() {
   return (
@@ -17,7 +14,7 @@ export default function Home() {
       </div>
 
       <div className="my-10">
-        <ExperiencePage />
+        <AboutPage />
       </div>
 
       {/* <div className="my-10">

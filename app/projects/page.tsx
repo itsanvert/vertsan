@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Project = () => {
   return (
-    <div className="container mx-auto px-4 py-10 ">
+    <div className="container mx-auto px-4 py-8 ">
       <h2 className="p-10 text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-foreground/80 via-foreground to-foreground/80 bg-clip-text text-transparent">
         Project
       </h2>
